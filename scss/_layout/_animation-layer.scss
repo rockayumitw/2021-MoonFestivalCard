@@ -1,0 +1,601 @@
+    //第一層動畫
+    ._animation-layer{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @include fixed(top 50% left 50%);
+        @include z-index(centerArea);
+        @include transform(translateX(-50%) translateY(-50%) scale(1));
+        @include media-max(md) {
+            @include transform(translateX(-50%) translateY(-50%) scale(1));
+        }
+        .loading{
+            .top-box{
+                width:100%;
+                height:100%;
+                background:#000;
+                @include absolute(top 0);
+                @include z-index(loading);
+                @include animation(loading, 1.5s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+            }
+            .bottom-box{
+                width:100%;
+                height:100%;
+                background:#000;
+                @include absolute(bottom 0);
+                @include z-index(loading);
+                @include animation(loading, 1.5s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+            }
+        }      
+        .header{
+            width: 100%;;
+            font-weight:bold;
+            font-size:20px;
+            color:white;
+            line-height: 24px;
+            @include relative(top 20px);
+            @include z-index(header);
+            .date{
+                @include absolute(left 20px);
+                @include media-max(sm){
+                    font-size:16px;
+                }
+            }
+            .text{
+                @include absolute(right 20px);
+                @include media-max(sm){
+                    font-size:16px;
+                }
+            }
+            .loader-23 {
+                height: 15px;
+                width: 35px;
+                border: 3px currentcolor solid;
+                border-radius: .1em;
+                position: relative;
+                animation: loader-23 5s linear infinite;
+                display: inline-block;
+                &:after {
+                    width: .07em;
+                    height: 100%;
+                    background-color: currentcolor;
+                    border-radius: 0px .5em .5em 0px;
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: calc(100% + .1em);
+                }
+            }
+            
+            @keyframes loader-23 {
+                0% {
+                    box-shadow: inset 0px 0px 0px currentcolor;
+                }
+                100% {
+                    box-shadow: inset 1em 0px 0px currentcolor;
+                }
+            }
+        }
+        .moon{
+            width: 325px;
+            transition: .3s;
+            opacity: 0;
+            @include absolute(top -10px right -10px);
+            @include media-max(sm){
+                width: 200px;
+                transition: .3s;
+            }
+            @include animation(moon-move, 5s, $timing-function: linear, $delay: 1s, $iteration-count: 1 , $direction: forwards, $fill-mode:forwards);
+        }
+        .mountain{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100%;
+            height: calc(600 * var(--unit));
+            background: url('/images/mountain.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            bottom: 0;
+            @include z-index(mountain);
+        }
+        .logo{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 420px;
+            height: 350px;
+            transition: .3s;
+            @include z-index(logo);
+            @include media-max(md){
+                transform: translate(-50%,-50%) scale(.8);
+                transition: .3s;
+            }
+            @include media-max(sm){
+                transform: translate(-50%,-50%) scale(.5);
+                transition: .3s;
+            }
+            .text-mid{
+                position: absolute;
+                left: 25%;
+                // @include animation(text-bounceIn, 5s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            }
+            .text-mid2{
+                position: absolute;
+                left: 50%;
+                top: 20%;
+            }
+            .text-side{
+                position: absolute;
+                left: 40%;
+                top: 45%;
+            }
+            .text-seal{
+                position: absolute;
+                top: 25%;
+                right: 35px;
+            }
+            .glod-cloud{
+                position: absolute;
+                bottom: 10px;
+                left: 12%;
+            }
+            // .glod-cloud-top{
+            //     position: absolute;
+            //     top: 60px;
+            //     right: -10%;
+            // }
+            .rabbit{
+                position: absolute;
+                bottom: 35%;
+                left: 17%;
+                .rabbit-body{
+
+                }
+                .rabbit-head{
+                    position: absolute;
+                    left: 60%;
+                    top: -30%;
+                    transform-origin: center center;
+                    @include animation(rabbit-head, 1s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                }
+                .rabbit-hand{
+                    position: absolute;
+                    left: 75%;
+                    top: 60%;
+                }
+            }
+            .moon-cookie{
+                position: absolute;
+                bottom: 22%;
+                left: 15%;
+            }
+            .moon-cookie2{
+                position: absolute;
+                bottom: 35%;
+                left: 28%;
+            }
+        }
+        .flower-right-group{
+            position: absolute;
+            right: 0;
+            top: 100px;
+            width: 230px;
+            height: 230px;
+            transition: .3s;
+            @include z-index(flower);
+            @include media-max(md){
+                width: 200px;
+                transition: .3s;
+            }
+            @include media-max(sm){
+                width: 160px;
+                top: 40px;
+                transition: .3s;
+            }
+            transform-origin: right center;
+            @include animation(flower-rotate-right, 5s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            .flower-right{
+                position: absolute;
+                right: -10px;
+                width: 100%;
+                transition: .3s;
+            }
+            .purple-light{
+                position: absolute;
+                top: 90px;
+                right: 90px;
+                width: 70px;
+                transition: .3s;
+                transform-origin: top center;
+                @include animation(purple-move, 2s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                @include media-max(md){
+                    width: 60px;
+                    transition: .3s;
+                    top: 80px;
+                    right: 80px;
+                }
+                @include media-max(sm) {
+                    width: 50px;
+                    transition: .3s;
+                    top: 65px;
+                    right: 55px;
+                }
+            }
+            .red-light{
+                position: absolute;
+                top: 133px;
+                right: 20px;
+                width: 80px;
+                transition: .3s;
+                transform-origin: top center;
+                @include animation(red-move, 2.5s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                @include media-max(md){
+                    width: 70px;
+                    transition: .3s;
+                    top: 115px;
+                    right: 20px;
+                }
+                @include media-max(sm) {
+                    width: 60px;
+                    transition: .3s;
+                    top: 90px;
+                    right: 10px;
+                }
+            }
+            .c1{
+                position: absolute;
+                width: 300px;
+                top: 70px;
+                // right: -300px;
+                z-index: 3;
+                transition: .3s;
+                @include media-max(md){
+                    top: 40px;
+                }
+                @include media-max(sm){
+                    top: 0px;
+                }
+                @include animation(cloud-move-c1, 15s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: forwards, $fill-mode:forwards);
+            }
+            
+        }
+        .flower-left-group{
+            position: fixed;
+            bottom: 0px;
+            width: 200px;
+            height: 300px;
+            transition: .3s;
+            @include z-index(flower);
+            @include media-max(md) {
+                width: 180px;
+                transition: .3s;
+            }
+            @include media-max(sm) {
+                width: 130px;
+                transition: .3s;
+            }
+            .flower-left{
+                left: -10px;
+                bottom: 100px;
+                width: 100%;
+                position: absolute;
+                transition: .3s;
+                transform-origin: left center;
+                @include animation(flower-rotate-left, 5s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            }
+            .c2{
+                position: absolute;
+                width: 100%;
+                top: 80px;
+                // left: 0;
+                z-index: 3;
+                transition: .3s;
+                @include animation(cloud-move-c2, 10s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: forwards, $fill-mode:forwards);
+            }
+        }
+        .decoration2{
+            @include z-index(footer);
+            background: url('/images/decoration2.svg');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            width: 100%;
+            height: 100px;
+            position: fixed;
+            bottom: 0;
+        }
+        .btn-area{
+            position: fixed;
+            bottom: 140px;
+            right: 100px;
+            transition: .3s;
+            // cursor: pointer;
+            @include z-index(btn);
+            &:hover{
+                transition: .3s;
+                filter: drop-shadow(0px 2px 2px rgba(255,255,255,0.8)) !important;
+                .shape{
+                    transform: scale(1.5);
+                }
+            }
+            @include animation(btnShine, 2s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            .light-white{
+                position: absolute;
+                top: 11px;
+                left: 25px;
+                z-index: 2;
+                transform-origin: top center;
+                @include animation(light-white, 2s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+            }
+            .btn-red{
+                position: relative;
+                z-index: 1;
+            }
+            .text{
+                position: absolute;
+                top: 12px;
+                left: 60px;
+                z-index: 2;
+            }
+            .letter-container {
+                position: absolute;
+                top: 0%;
+                left: 40%;
+                width: 100%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+                .letter {
+                  width: 100%;
+                  color: #fffbf2;
+                  font-weight: bold;
+                  font-size: 40px;
+                  font-family: Didot, Didot LT STD, Hoefler Text, Garamond,
+                        Times New Roman, serif;
+                  filter: drop-shadow(
+                        calc(5 * var(--unit)) calc(5 * var(--unit)) calc(5 * var(--unit))
+                          rgba(0, 0, 0, 0.2)
+                  );
+                }
+              }
+            .rabbit-shadow{
+                position: absolute;
+                bottom: 55px;
+                right: 30px;
+                z-index: 0;
+            }
+            @include media-max(md){
+                position: fixed;
+                bottom: 110px;
+                right: 0px;
+                transition: .3s;
+                transform: scale(.8);
+            }
+        }
+        .light-group{
+            width: 100%;
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            @include z-index(light);
+            img{
+                position: absolute;
+                width: 110px;
+                bottom: -150px;
+            }
+            .kong-ming-light{
+                @include animation(kong-ming-light, 10s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: forwards, $fill-mode:forwards);
+            }
+            .kong-ming-light-2{
+                @include animation(kong-ming-light2, 15s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: forwards, $fill-mode:forwards);
+            }
+        }
+        .dot-group{
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            @include z-index(dot);
+            .dot{
+                position: absolute;
+                top: 0;
+                width: 6px;
+            }
+        }
+        
+    }
+
+// cloud -c1
+@include keyframes(cloud-move-c1){
+    0%{
+        right: -300px;
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        right: 20px;
+        opacity: 0;
+    }
+}
+
+// cloud -c2
+@include keyframes(cloud-move-c2){
+    0%{
+        left: -300px;
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        left: 20px;
+        opacity: 0;
+    }
+}
+
+// flower -flower-rotate-left
+@include keyframes(flower-rotate-left){
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
+
+// flower -flower-rotate-right
+@include keyframes(flower-rotate-right){
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+
+// light -purple
+@include keyframes(purple-move){
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
+
+// light -red
+@include keyframes(red-move){
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(8deg);
+    }
+}
+
+// moon 
+@include keyframes(moon-move){
+    0%{
+        top: -300px;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        top: -10px;
+        opacity: 1;
+    }
+}
+
+// rabbit-head
+@include keyframes(rabbit-head){
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(8deg);
+    }
+}
+
+// light-white
+@include keyframes(light-white){
+    0%{
+       transform: rotate(8deg);
+    }
+    100%{
+        transform: rotate(-8deg);
+    }
+}
+
+// 孔明燈
+@include keyframes(kong-ming-light){
+    0%{
+        transform: rotate(8deg);
+        bottom: -100px;
+        left: 185px;
+     }
+     40%{
+        transform: rotate(20deg) scale(.8);
+        bottom: 400px;
+        left: 300px;
+     }
+     60%{
+        transform: rotate(0deg) scale(.7);
+        bottom: 600px;
+        left: 400px;
+     }
+     80%{
+        transform: rotate(20deg) scale(.6);
+        bottom: 800px;
+        left: 505px;
+        opacity: 1;
+     }
+     100%{
+        transform: rotate(15deg) scale(.2);
+        bottom: 900px;
+        left: 600px;
+        opacity: 1;
+     }
+}
+
+// 孔明燈
+@include keyframes(kong-ming-light2){
+    0%{
+        transform: rotate(8deg);
+        bottom: -100px;
+        left: 455px;
+     }
+     40%{
+        transform: rotate(20deg) scale(.8);
+        bottom: 400px;
+        left: 550px;
+     }
+     60%{
+        transform: rotate(0deg) scale(.7);
+        bottom: 600px;
+        left: 550px;
+     }
+     80%{
+        transform: rotate(20deg) scale(.6);
+        bottom: 800px;
+        left: 455px;
+        opacity: 1;
+     }
+     100%{
+        transform: rotate(15deg) scale(.2);
+        bottom: 900px;
+        left: 690px;
+        opacity: 0;
+     }
+}
+
+// 載入
+@include keyframes(loading){
+    0% {
+        height: 50%;
+    }
+    100% {
+        height: 0;
+    } 
+}
+
+
+// 按鈕
+@include keyframes(btnShine){
+    0%{
+        transition: .3s;
+        filter: drop-shadow(0px 2px 2px rgba(255,255,255,0.2));
+    }
+    100%{
+        transition: .3s;
+        filter: drop-shadow(0px 2px 2px rgba(252, 255, 255, 0.8));
+    }
+}
+
+

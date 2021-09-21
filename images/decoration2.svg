@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="310.682" viewBox="0 0 1920 310.682">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6b331a"/>
+      <stop offset="0.17" stop-color="#a98128"/>
+      <stop offset="0.32" stop-color="#cea52e"/>
+      <stop offset="0.423" stop-color="#fcf39f"/>
+      <stop offset="0.552" stop-color="#cea52e"/>
+      <stop offset="0.877" stop-color="#fcf39f"/>
+      <stop offset="1" stop-color="#cea52e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#cfa624"/>
+      <stop offset="0.019" stop-color="#d3ad2e"/>
+      <stop offset="0.117" stop-color="#e9d25f"/>
+      <stop offset="0.191" stop-color="#f6e87e"/>
+      <stop offset="0.233" stop-color="#fcf18a"/>
+      <stop offset="0.287" stop-color="#efdb6c"/>
+      <stop offset="0.371" stop-color="#ddbe45"/>
+      <stop offset="0.438" stop-color="#d2ac2c"/>
+      <stop offset="0.479" stop-color="#cfa624"/>
+      <stop offset="0.574" stop-color="#e0c249" stop-opacity="0.675"/>
+      <stop offset="0.66" stop-color="#eed966" stop-opacity="0.42"/>
+      <stop offset="0.725" stop-color="#f7e779" stop-opacity="0.259"/>
+      <stop offset="0.761" stop-color="#fbed80" stop-opacity="0.2"/>
+      <stop offset="0.828" stop-color="#f3e06f" stop-opacity="0.165"/>
+      <stop offset="0.937" stop-color="#ddbe43" stop-opacity="0.067"/>
+      <stop offset="1" stop-color="#cfa624" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2d4679"/>
+      <stop offset="1" stop-color="#102b57"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.992" y1="0.5" x2="0.016" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2d4679"/>
+      <stop offset="1" stop-color="#001c45"/>
+    </linearGradient>
+  </defs>
+  <g id="decoration2" style="mix-blend-mode: color-dodge;isolation: isolate">
+    <path id="路径_197" data-name="路径 197" d="M1905.828,136.15S1651.485,44.8,1138.137,158.431C754.274,243.4,359.3,243.1-14.172,100.5V410.555h1920Z" transform="translate(14.172 -100.501)" fill="url(#linear-gradient)"/>
+    <path id="路径_198" data-name="路径 198" d="M1905.828,194.824s-238.892-97.625-767.691,0C753.426,265.86,368.115,252.01-14.172,100.5V410.555h1920Z" transform="translate(14.172 -100.501)" fill="url(#linear-gradient-2)" style="mix-blend-mode: multiply;isolation: isolate"/>
+    <path id="路径_199" data-name="路径 199" d="M1905.828,233.55s-288.8-106.876-733.6-35.556c-408.4,71.276-780.76,57.413-1186.4-96.5V407.758h1920Z" transform="translate(14.172 -97.076)" fill="url(#linear-gradient-3)"/>
+    <path id="路径_200" data-name="路径 200" d="M1905.828,264.807s-259.668-105.29-672.408-48.986C828.66,276.455,441.981,260.346-14.172,101.351V407.618h1920Z" transform="translate(14.172 -97.563)" fill="url(#linear-gradient-4)"/>
+  </g>
+</svg>

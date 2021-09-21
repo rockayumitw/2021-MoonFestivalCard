@@ -1,0 +1,374 @@
+.middle-drag-box{
+    width:400px;
+    height: calc(100% - 120px);
+    margin-left: -200px;
+    @include absolute(bottom 0 left 50%);
+    @include media-min-height(lg){
+        height:70vh;
+    }
+    @include media-max(xs){
+        width:360px;
+        height: calc(100% - 130px);
+        margin-left: -180px;
+    }
+    @include media-max(xxs){
+        height: calc(100% - 130px);
+    }
+    .draggon-ui{
+        text-align: center;
+        cursor:grab;
+        @include relative();
+        @include z-index(sun);
+        .sun{
+            width:100%;
+            @include relative();
+            @include opacity(1);
+            cursor:grap;
+            @include media-max(xxs){
+                width:300px;
+            }
+            @include animation(sun_shine, 3s, $timing-function: linear, $delay: 0s, $iteration-count: infinite, $direction: alternate ,$fill-mode: forwards);
+        }
+        @include animation(sun_fade_In, 1s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:none);
+        &.hide{
+            @include animation(fade_out, 1s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+        }
+    }
+    .moon-box{
+        width:300px;
+        height:300px;
+        @include absolute(top 80px left 50%);
+        @include transform(translate(-50%));
+        @include z-index(sun);
+        .moon-bg,.moon-front{
+            @include absolute(left 0);
+        }
+        @include media-max(xxs){
+            @include absolute(top 10px left 50%);
+            @include transform(translate(-50%) scale(0.8));
+        }
+        @include animation(moon_up, 1s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+        &.hide{
+            display:none;
+        }
+        .rabbit-group{
+            width: 170px;
+            height: 105px;
+            @include filter(url(#heat2));
+            @include opacity(0);
+            @include transform(scale(0.7));
+            @include absolute(bottom 30px right 45px);
+            @include transition(.3s);
+            .rabbit{
+                width:60px;
+                height:95px;
+                @include absolute(right 0);
+                &.__rabbit-right{
+                    .rabbit-hand{
+                        @include absolute(top 35px left -12px);
+                        @include transform-origin(30px 2px);
+                        @include animation(rabbit_hand, .8s, $timing-function: linear, $delay: .8s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    .rabbit-wood{
+                        @include absolute(left -10px bottom 12px);
+                        @include transform(rotate(10deg));
+                        @include animation(rabbit_wood, .8s, $timing-function: linear, $delay: .8s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                }
+                &.__rabbit-left{
+                    left: 35px;
+                    @include transform(rotateY(180deg));
+                    .rabbit-hand{
+                        @include absolute(top 35px left -12px);
+                        @include transform-origin(30px 2px);
+                        @include animation(rabbit_hand, .8s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    .rabbit-wood{
+                        @include absolute(left -10px bottom 12px);
+                        @include animation(rabbit_wood, .8s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                }
+            }
+            .rabbit-box{
+                @include absolute(left 50% bottom 5px);
+                
+            }
+            &.active{
+                @include transition(.3s);
+                @include opacity(.5);
+            }
+        }
+    }
+    .text-run{
+        width:450px;
+        height:220px;
+        overflow:hidden;
+        margin-left:-225px;
+        @include opacity(0);
+        @include absolute(top -30% left 50%);
+        @include media-max(xs){
+            @include absolute(top -45% left 50%);
+            @include transform(scale(0.9));
+        }
+        .text{
+            width:450px;
+            height:450px;
+            @include opacity(0);
+            @include transform(rotate(-151deg));
+            @include transition(all 1.2s ease .2s);
+            @include absolute(top 0 left 0);
+            @include media-max(xs){
+                @include absolute(top 18%);
+                @include transform(rotate(0deg) scale(0.8));
+            }
+            &.active{
+                display:block;
+                @include opacity(1);
+                @include transition(all 1.2s ease .2s);
+                @include transform(rotate(0deg));
+                &:before{
+                    content:"";
+                    display:block;
+                    @include imgBg(false,3px,40px,#fcc64d,false,false,false);
+                    @include transform(skewX(12deg) rotate(-54deg));
+                    @include absolute(top 120px left 25px);
+                }
+                &:after{
+                    content:"";
+                    display:block;
+                    @include imgBg(false,3px,40px,#fcc64d,false,false,false);
+                    @include transform(skewX(0deg) rotate(-120deg));
+                    @include absolute(top 120px right 25px);
+                }
+            }
+            &.hide{
+                @include transform(rotate(151deg));
+                @include opacity(0);
+            }
+        }
+    }
+    .dot-area{
+        width:7px;
+        margin-left:-3.5px;
+        @include z-index(line);
+        @include absolute(left 50% top 275px);
+        @include animation(line_fade_In, 1.5s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:none);
+        @include media-max(xxs){
+            top:175px;
+            @include animation(line_fade_In_xxs, 1.5s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:none);
+        }
+
+        
+        .dot{
+            border-radius:50px;
+            margin-left:-3.5px;
+            @include imgBg(false,7px,7px,white,false,false,false);
+            @include absolute(left 50%);
+            @include animation(dot_move, 1.5s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: normal, $fill-mode:forwards);
+        }
+    }
+    .btn-here{
+        height:140px;
+        @include absolute(left 50% bottom 100px);
+        @include transform(translate(-50%));
+        @include media-max(xs){
+            bottom: 100px;
+        }
+        @include media-max(xxs){
+            bottom: 75px;
+            @include transform(translate(-50%) scale(0.6));
+        }
+        @include animation(bottom_circle, 1s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+        .outer-circle{
+            width:280px;
+            height:280px;
+            border:2px dotted white;
+            border-radius:50%;
+            @include absolute(top -20% left 50%);
+            @include transform(translate(-50%));
+            @include animation(rotate_move, 5s, $timing-function: linear, $delay: 1s, $iteration-count: infinite , $direction: normal, $fill-mode:forwards);
+            @include media-max(xs){
+                @include absolute(top 25px left 50%);
+            }
+            @include media-max(xxs){
+                @include absolute(top 65px left 50%);
+            }
+        }
+        .inner-circle{
+            position:absolute;
+            width:250px;
+            height:250px;
+            border:2px solid white;
+            border-radius:50%;
+            @include absolute(top -10% left 50%);
+            @include transform(translate(-50%));
+            @include media-max(xs){
+                @include absolute(top 40px left 50%);
+            }
+            @include media-max(xxs){
+                @include absolute(top 85px left 50%);
+            }
+        }
+        .text{
+            color:white;
+            text-align:center;
+            line-height: 12px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-size: 12px;
+            @include relative(top 10px);
+            
+        }
+        &.__night{
+            width:100%;
+            margin:0 auto;
+            margin-top: 400px;
+            text-align:center;
+            cursor:pointer;
+            // opacity:0;
+            // @include opacity(0);
+            @include relative(left 50% bottom 0px);
+            @include transform(translate(-50%));
+            @include z-index(btn_retry);
+            .text{
+                @include relative(top 10px);
+                
+            }
+            img{
+                &:hover{
+                    @include animation(btn_retry, 1s, $timing-function: linear, $delay: 0s, $iteration-count: 1 , $direction: normal, $fill-mode:forwards);
+                }
+            }
+        }
+        &.__light{
+            @include z-index(btn_here_light);
+            &.show{
+                display:block;
+            }
+            &.hide{
+                display:none;
+            }
+            .text{
+                @include relative(top 18px);
+                @include media-max(xs){
+                    @include relative(top 70px);
+                }
+                @include media-max(xxs){
+                    top: 115px;
+                }
+                &:before{
+                    content:'';
+                    @include transform(rotate(180deg));
+                    @include opacity(0);
+                    @include imgBg($decoration,20px,40px,false,false,no-repeat,false);
+                    @include absolute(top -8px right -25px);
+                    @include animation(fade_In, 1s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                }
+                &:after{
+                    content:'';
+                    @include imgBg($decoration,20px,40px,false,false,no-repeat,false);
+                    @include absolute(top -8px left -25px);
+                    @include animation(fade_In, 1s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes rabbit_hand{
+    0%{
+        @include transform(rotate(10deg));
+    }
+    100%{
+        @include transform(rotate(-12deg));
+    }
+}
+
+@keyframes rabbit_wood{
+    0%{
+        @include transform(rotate(15deg));
+        @include transform-origin(-1px 29px);
+        top: 18px;
+    }
+    100%{
+        @include transform(rotate(7deg));
+        @include transform-origin(-1px 29px);
+        top: 30px;
+    }
+}
+
+@include keyframes(moon_up){
+    0%{
+        opacity:0;
+        top: 350px;
+    }
+    100%{
+        opacity: 1;
+        top: 80px;
+    }
+}
+
+@include keyframes(sun_fade_In){
+    0% {
+        opacity: 0;
+        top:-70px;
+    }
+    100% {
+        opacity: 1;
+        top:0px;
+    } 
+}
+
+@include keyframes(sun_shine){
+    0%{
+        @include filter(drop-shadow(2px 4px 0 #fbeabb9e));
+    }
+    100%{
+        @include filter(drop-shadow(2px 4px 50px #fbeabb));
+    }
+}
+
+//
+
+@include keyframes(line_fade_In){
+    0%{
+        @include opacity(0);
+        @include absolute(left 50% top 260px);
+    }
+    100%{
+        @include opacity(1);
+        @include absolute(left 50% top 275px);
+    }
+}
+
+@include keyframes(line_fade_In_xxs){
+    0%{
+        @include opacity(0);
+        @include absolute(left 50% top 160px);
+    }
+    100%{
+        @include opacity(1);
+        @include absolute(left 50% top 175px);
+    }
+}
+
+@include keyframes(dot_move){
+    0% {
+        top: 0px;
+        opacity: 1;
+    }
+    100% {
+        top: 115px;
+        opacity: 0;
+    } 
+}
+
+@include keyframes(bottom_circle){
+    0%{
+        bottom: 5px;
+    }
+    100%{
+        bottom: 100px;
+    }
+}

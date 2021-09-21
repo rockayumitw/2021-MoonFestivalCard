@@ -1,0 +1,385 @@
+//writing-mode: vertical-lr;
+//writing-mode:
+
+//字體大小計算
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+//計算zIndex
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+@mixin absolute($args: ()) {
+  @include position(absolute, $args);
+}
+ 
+@mixin fixed($args: ()) {
+  @include position(fixed, $args);
+}
+ 
+@mixin relative($args: ()) {
+  @include position(relative, $args);
+}
+
+//計算position
+@mixin position($position, $args: ()) {
+  $offsets: top right bottom left;
+  position: $position;                                               // 1
+  
+  @each $offset in $offsets {                                        // 3
+    $index: index($args, $offset);                                   // 4
+    
+    @if $index {                                                     // 5
+      @if $index == length($args) {                                  // 6
+        #{$offset}: 0;                                               // 7
+      }
+      @else {                                                        // 8
+        $next: nth($args, $index + 1);                               // 9
+        @if is-valid-length($next) {                                 // 10
+          #{$offset}: $next;                                         // 11
+        }
+        @else if index($offsets, $next) {                            // 12
+          #{$offset}: 0;                                             // 13
+        }
+        @else {                                                      // 14
+          @warn "Invalid value `#{$next}` for offset `#{$offset}`."; // 15
+        }
+      }
+    }
+  }
+}
+
+@function is-valid-length($value) {
+  @return (type-of($value) == "number" and not unitless($value)) 
+       or (index(auto initial inherit 0, $value) != false);
+}
+
+//border
+//@include(top,1px,solid,#fff)
+@mixin border($direction, $width, $style, $color) {
+  @if $direction != "false" {
+    border-#{$direction}: $width $style $color;
+  }
+  @if $direction == "false" {
+    border: $width $style $color;
+  }
+}
+
+//圓角
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//漸層
+@mixin gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from, $to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+// filter
+@mixin filter($value) {
+  -webkit-filter: $value;
+     -moz-filter: $value;
+       -o-filter: $value;
+          filter: $value;
+}
+
+//shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+//btn
+@mixin btnGroup($color, $background, $border) {
+  color: $color;
+  background-color: darken($background, 10%);
+  border-color: darken($border, 10%);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 0%);
+    border-color: darken($border, 0%);
+    //lighten(color,10%)
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+}
+
+//transition套用
+@mixin transition($sec) {
+  transition: $sec;
+  transition: -webkit-transform $sec;
+  -webkit-transition: $sec;
+  -moz-transition: $sec;
+  -ms-transition: $sec;
+  -o-transition: $sec;
+}
+
+//transform
+//type => scale(num) rotate(deg)
+//type => scale(num)
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -o-transition: $type;
+  transform: $type;
+}
+
+//
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+//
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+//圖片調整
+@mixin imgBg($bgImage, $width, $height, $bg, $bgSize, $repeat, $position) {
+  @if $bgImage {
+    background-image: url($bgImage);
+  }
+  @if $width {
+    width: $width;
+  }
+  @if $height {
+    height: $height;
+  }
+  @if $bg {
+    background: $bg;
+  }
+  background-size: $bgSize;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+//rwd-最小寬度
+@mixin media-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+//rwd-最大寬度
+@mixin media-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// rwd-最大高度
+@mixin media-min-height($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-height: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+//...隱藏最大寬度
+//multiline
+@mixin ellipse($type, $num) {
+  @if ($type == "single") {
+    white-space: nowrap;
+  }
+  @if ($type == "multiline") {
+    white-space: inherit;
+    display: -webkit-box;
+    word-break: break-word;
+  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $num;
+  -moz-line-clamp: $num;
+  -ms-line-clamp: $num;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+}
+
+//字體設定
+@mixin font-source-sans($size: false, $letterSpacing: false, $color: false, $align: false, $weight: false, $lh: false) {
+  font-family: $font-Style;
+  @if $letterSpacing {
+    letter-spacing: $letterSpacing;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $align {
+    text-align: $align;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+//透明度跨瀏覽
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+  // @include opacity(0.8);
+}
+
+//動畫前贅詞套用
+//infinite : 反覆次數(無限)
+//linear : 動畫曲線(速率一致)
+//alternate : 動畫反轉
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+//動畫
+//前綴
+@mixin experimental(
+  $property,
+  $value,
+  $moz: $experimental-support-for-mozilla,
+  $webkit: $experimental-support-for-webkit,
+  $o: $experimental-support-for-opera,
+  $ms: $experimental-support-for-microsoft,
+  $khtml: $experimental-support-for-khtml,
+  $official: true
+) {
+  @if $webkit and $experimental-support-for-webkit {
+    -webkit-#{$property}: $value;
+  }
+  @if $khtml and $experimental-support-for-khtml {
+    -khtml-#{$property}: $value;
+  }
+  @if $moz and $experimental-support-for-mozilla {
+    -moz-#{$property}: $value;
+  }
+  @if $ms and $experimental-support-for-microsoft {
+    -ms-#{$property}: $value;
+  }
+  @if $o and $experimental-support-for-opera {
+    -o-#{$property}: $value;
+  }
+  @if $official {
+    #{$property}: $value;
+  }
+}
+
+//動畫
+//https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+@mixin animation(
+  $name,
+  $duration,
+  $timing-function: false,
+  $delay: false,
+  $iteration-count: false,
+  $direction: false,
+  $fill-mode: false
+) {
+  @include experimental(animation-name, $name, -moz, -webkit, -o, -ms, not -khtml, official); //動畫名稱
+  @include experimental(
+    animation-duration,
+    $duration,
+    -moz,
+    -webkit,
+    -o,
+    -ms,
+    not -khtml,
+    official
+  ); //定義動畫完成一次週期的時間 .3s / forward
+
+  @if $timing-function {
+    //定義動畫轉變時時間的加速曲線 (例如 linear、ease-in、ease-out、ease-in-out、step-start、step-end、steps(int,start/end)、cubic-bezier(n,n,n,n))。
+    @include experimental(animation-timing-function, $timing-function, -moz, -webkit, -o, -ms, not -khtml, official);
+  }
+
+  @if $delay {
+    //定義元素讀取完畢到動畫開始的間隔時間
+    @include experimental(animation-delay, $delay, -moz, -webkit, -o, -ms, not -khtml, official);
+  }
+
+  @if $iteration-count {
+    //定義動畫重複的次數。可用 infinite 來讓動畫永遠重複播放,數字1。
+    @include experimental(animation-iteration-count, $iteration-count, -moz, -webkit, -o, -ms, not -khtml, official);
+  }
+
+  @if $direction {
+    //預設normal,定義是否動畫播放完畢後將會反向播放 reverse、alternate、alternate-reverse
+    @include experimental(animation-direction, $direction, -moz, -webkit, -o, -ms, not -khtml, official);
+  }
+
+  @if $fill-mode {
+    //fill-mode 定義元素在動畫播放外(動畫開始前及結束後)的狀態
+    //none、forwards、backwards、both。
+    @include experimental(animation-fill-mode, $fill-mode, -moz, -webkit, -o, -ms, not -khtml, official);
+  }
+}

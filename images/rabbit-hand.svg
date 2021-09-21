@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.947" height="8.393" viewBox="0 0 8.947 8.393">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.219" y1="0.195" x2="1.11" y2="1.206" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.024" stop-color="#fff" stop-opacity="0.082"/>
+      <stop offset="0.099" stop-color="#fff" stop-opacity="0.322"/>
+      <stop offset="0.174" stop-color="#fff" stop-opacity="0.529"/>
+      <stop offset="0.247" stop-color="#fff" stop-opacity="0.698"/>
+      <stop offset="0.317" stop-color="#fff" stop-opacity="0.827"/>
+      <stop offset="0.383" stop-color="#fff" stop-opacity="0.925"/>
+      <stop offset="0.444" stop-color="#fff" stop-opacity="0.98"/>
+      <stop offset="0.496" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.019" y1="0.5" x2="0.957" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eabd54"/>
+      <stop offset="0.155" stop-color="#f5d674"/>
+      <stop offset="0.277" stop-color="#ffed91"/>
+      <stop offset="0.478" stop-color="#ffed91"/>
+      <stop offset="0.705" stop-color="#c27917"/>
+      <stop offset="0.738" stop-color="#cb8c29"/>
+      <stop offset="0.82" stop-color="#e1b753"/>
+      <stop offset="0.894" stop-color="#f1d671"/>
+      <stop offset="0.956" stop-color="#fbe983"/>
+      <stop offset="1" stop-color="#fff08a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.14" y1="0.5" x2="0.888" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff08a"/>
+      <stop offset="1" stop-color="#eabd54"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.183" y1="0.5" x2="0.764" y2="0.5" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-5" x1="0.402" y1="0.5" x2="0.627" y2="0.5" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-6" x1="0.162" y1="0.5" x2="0.837" y2="0.5" xlink:href="#linear-gradient-3"/>
+  </defs>
+  <g id="rabit-hand" transform="translate(0 0)">
+    <path id="路径_105" data-name="路径 105" d="M310.39,251.785s4.108,6.55,6.924,6.227-1.983-7.773-1.983-7.773" transform="translate(-309.553 -249.71)" fill="url(#linear-gradient)"/>
+    <g id="组_152" data-name="组 152">
+      <g id="组_151" data-name="组 151">
+        <path id="路径_106" data-name="路径 106" d="M313.306,248.958a23.337,23.337,0,0,1,1.659,3.123c.557,1.24,2.206,3.78-.024,4.391-1.532.419-2.832-1.354-3.707-2.312-.94-1.029-1.867-2.073-2.843-3.069-.18-.184-.435.086-.277.278a32.214,32.214,0,0,0,4.411,4.9,4.08,4.08,0,0,0,3.793.646c2.358-1.254-1.989-6.924-2.787-8.089-.093-.136-.315-.011-.224.131Z" transform="translate(-308.064 -248.768)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+    <g id="组_154" data-name="组 154" transform="translate(5.572 6.891)">
+      <g id="组_153" data-name="组 153">
+        <path id="路径_107" data-name="路径 107" d="M323.677,268.272a1.415,1.415,0,0,0,.995.019.138.138,0,0,0-.032-.25,1.873,1.873,0,0,0-.416-.031,2.035,2.035,0,0,1-.452-.078.177.177,0,0,0-.094.341Z" transform="translate(-323.552 -267.924)" fill="url(#linear-gradient-3)"/>
+      </g>
+    </g>
+    <g id="组_156" data-name="组 156" transform="translate(6.326 6.093)">
+      <g id="组_155" data-name="组 155">
+        <path id="路径_108" data-name="路径 108" d="M325.822,266.171c.139-.035.28-.058.417-.1.232-.068.116-.443-.1-.354-.145.061-.282.137-.425.2s-.04.287.105.25Z" transform="translate(-325.647 -265.704)" fill="url(#linear-gradient-4)"/>
+      </g>
+    </g>
+    <g id="组_158" data-name="组 158" transform="translate(6.338 5.023)">
+      <g id="组_157" data-name="组 157">
+        <path id="路径_109" data-name="路径 109" d="M325.743,263.079l.085.075a.2.2,0,0,0,.275-.275l-.075-.085c-.172-.2-.481.113-.285.285Z" transform="translate(-325.68 -262.731)" fill="url(#linear-gradient-5)"/>
+      </g>
+    </g>
+    <g id="组_160" data-name="组 160" transform="translate(5.567 3.53)">
+      <g id="组_159" data-name="组 159">
+        <path id="路径_110" data-name="路径 110" d="M323.668,258.937a2.012,2.012,0,0,1,.666.313c.17.117.386-.157.223-.289a1.854,1.854,0,0,0-.792-.376c-.228-.049-.325.294-.1.351Z" transform="translate(-323.538 -258.582)" fill="url(#linear-gradient-6)"/>
+      </g>
+    </g>
+  </g>
+</svg>

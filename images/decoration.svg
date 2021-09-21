@@ -1,0 +1,25 @@
+<svg id="decoration" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="646.903" height="191.643" viewBox="0 0 646.903 191.643">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.088" y1="-11.556" x2="2.088" y2="-11.556" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#cfa624"/>
+      <stop offset="0.019" stop-color="#d3ad2e"/>
+      <stop offset="0.117" stop-color="#e9d25f"/>
+      <stop offset="0.191" stop-color="#f6e87e"/>
+      <stop offset="0.233" stop-color="#fcf18a"/>
+      <stop offset="0.287" stop-color="#efdb6c"/>
+      <stop offset="0.371" stop-color="#ddbe45"/>
+      <stop offset="0.438" stop-color="#d2ac2c"/>
+      <stop offset="0.479" stop-color="#cfa624"/>
+      <stop offset="0.607" stop-color="#e6cc55"/>
+      <stop offset="0.706" stop-color="#f5e374"/>
+      <stop offset="0.761" stop-color="#fbed80"/>
+      <stop offset="0.804" stop-color="#f6e677"/>
+      <stop offset="0.874" stop-color="#ebd35e"/>
+      <stop offset="0.962" stop-color="#d8b437"/>
+      <stop offset="1" stop-color="#cfa624"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.088" y1="-16.375" x2="2.088" y2="-16.375" xlink:href="#linear-gradient"/>
+  </defs>
+  <path id="路径_195" data-name="路径 195" d="M-14.171,144.6S288.352,361,632.732,223.562c0,0-314.92,106.056-646.9-145.948Z" transform="translate(14.171 -77.614)" fill="url(#linear-gradient)"/>
+  <path id="路径_196" data-name="路径 196" d="M-14.171,104.529s302.523,216.395,646.9,78.958c0,0-307.987,125.071-646.9-94.279Z" transform="translate(14.171 -37.54)" fill="url(#linear-gradient-2)" style="mix-blend-mode: multiply;isolation: isolate"/>
+</svg>

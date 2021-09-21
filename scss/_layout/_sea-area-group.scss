@@ -1,0 +1,233 @@
+.sea-area-group{
+    // @include relative();
+    .sky-light-box{
+        width:300px;
+        height:300px;
+        margin-left:180px;
+        @include absolute(left 50% bottom 74px);
+        @include media-max(xs){
+            margin-left:60px;
+        }
+        &.hide{
+            display:none;
+        }
+        .btn-sky-light{
+            cursor:pointer;
+            @include z-index(btn_sky_light);
+            @include absolute(bottom 50px);
+            @include media-max(xs){
+                bottom: 0px;
+                left: 8px;
+            }
+            @include animation(btn_sky_light, 3s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: normal, $fill-mode:forwards);
+            @include transition(.3s);
+            // &:hover{
+            //     @include transition(.3s);
+            //     @include transform(scale(1.5));
+            // }
+        }
+        .sky-light{
+            width:60px;
+            height:55px;
+            @include opacity(0);
+            @include absolute(left 0 bottom 0);
+            @include animation(sky_light_ani, 15s, $timing-function: linear, $delay: 0s, $iteration-count: infinite , $direction: normal, $fill-mode:forwards);
+        }
+        .sky-area{
+            width: 225px;
+            height: 118px;
+            @include relative(bottom -135px);
+        }
+    }
+
+    .wave-area{
+        width:100%;
+        height:100px;
+        @include absolute(bottom 0);
+        .house{
+            left:0;
+            pointer-events:none;
+            @include transition(all .3s);
+            @include filter(brightness(1));
+            @include z-index(house);
+            @include absolute(bottom -5px);
+            @include imgBg($home_bg,100%,450px,false,cover,no-repeat,center);
+            @include media-max(xs){
+                @include absolute(bottom 0px);
+                @include imgBg($home_bg_m,100%,200px,false,false,no-repeat,bottom);
+                @include transition(.3s);
+            }
+            &.dark{
+                @include transition(all .3s);
+                @include filter(brightness(0.75));
+            }
+        }
+        .wave-yellow-group{
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            margin-left:-150px;
+            @include z-index(wave);
+            @include absolute(left 50%);
+            @include media-max(xs){
+                display:none;
+            }
+            $total : 3;
+            $time : 4s;
+            @for $i from 1 through $total{
+                .c#{$i}{
+                    @if($i == 1){
+                        @include animation(wave_move_yellow#{$i}, $time, $timing-function: linear, $delay: ($i * .01s * random(4)), $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    @if($i == 2){
+                        @include animation(wave_move_yellow#{$i}, $time, $timing-function: linear, $delay: ($i * .01s * random(3)), $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    @if($i == 3){
+                        @include animation(wave_move_yellow#{$i}, $time, $timing-function: linear, $delay: ($i * .01s * random(4)), $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                }
+                @keyframes wave_move_yellow#{$i}{
+                    @if($i == 1){
+                        0%{
+                            opacity:0.5;
+                            @include absolute(top 14px left 20%);
+                        }
+                        100%{
+                            opacity:1;
+                            @include absolute(top 14px left 20% * 1.5);
+                        }
+                    }
+                    @if($i == 2){
+                        0%{
+                            opacity:0;
+                            @include absolute(top -6px left 20%);
+                        }
+                        100%{
+                            opacity:1;
+                            @include absolute(top -6px left 20% * 1.5);
+                        }
+                    }
+                    @if($i == 3){
+                        0%{
+                            opacity:0.5;
+                            @include absolute(top -6px left 35%);
+                        }
+                        100%{
+                            opacity:1;
+                            @include absolute(top -6px left 35% * 2);
+                        }
+                    }
+                } 
+            }
+        }
+        .wave-blue-group{
+            width: 1000px;
+            height: 100px;
+            margin-left: -500px;
+            @include z-index(wave);
+            @include absolute(left 50%);
+            @include media-max(xs){
+                display:none;
+            }
+
+            $total : 3;
+            $time : 4s;
+            @for $i from 1 through $total{
+                .c#{$i}{
+                    @if($i == 1){
+                        @include animation(wave_move_blue#{$i}, $time, $timing-function: linear, $delay: ($i * .01s * random(4)), $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    @if($i == 2){
+                        @include animation(wave_move_blue#{$i}, $time, $timing-function: linear, $delay: ($i * .01s * random(3)), $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    @if($i == 3){
+                        @include animation(wave_move_blue#{$i}, $time, $timing-function: linear, $delay: ($i * .01s * random(4)), $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    @if($i == 4){
+                        @include animation(wave_move_blue#{$i}, $time, $timing-function: linear, $delay: ($i * .01s * random(4)), $iteration-count: infinite , $direction: alternate, $fill-mode:forwards);
+                    }
+                    
+                }
+        
+                @keyframes wave_move_blue#{$i}{
+                    @if($i == 1){
+                        0%{
+                            @include opacity(0.5);
+                            @include absolute(top -6px right 3%);
+                        }
+                        100%{
+                            @include opacity(1);
+                            @include absolute(top -6px right 3% * 1.5);
+                        }
+                    }
+                    @if($i == 2){
+                        0%{
+                            @include opacity(0);
+                            @include absolute(top 17px right 4%);
+                        }
+                        100%{
+                            @include opacity(1);
+                            @include absolute(top 17px right 4% * 1.5);
+                        }
+                    }
+                    @if($i == 3){
+                        0%{
+                            @include opacity(0.5);
+                            @include absolute(top 33px left 15%);
+                        }
+                        100%{
+                            @include opacity(1);
+                            @include absolute(top 33px left 15% * 0.5);
+                        }
+                    }
+                    @if($i == 4){
+                        0%{
+                            @include opacity(1);
+                            @include absolute(top 15px left 0% * 1.5);
+                        }
+                        100%{
+                            @include opacity(0.5);
+                            @include absolute(top 15px left 0%);
+                            
+                        }
+                    }
+                } 
+            }
+
+        }
+    }
+}
+
+@include keyframes(btn_sky_light){
+    0% {
+        @include filter(drop-shadow(0 0px 0 #fff));
+        @include transform(rotate(0));
+    }
+    70%{
+        @include filter(drop-shadow(0 0px 10px #fff));
+    }
+    100% {
+        @include transform(rotate(360deg));
+        @include filter(drop-shadow(0 0px 0px #fff));
+    } 
+}
+
+
+@keyframes sky_light_ani{
+    0% {
+        @include transform(translate(0, 0) rotate(0));
+        @include opacity(0);
+    }
+    16% {
+        @include transform(translate(100px, -100px) rotate(45deg));
+        @include opacity(0);
+    }
+    32% {
+        @include transform(translate(30px, -180px) rotate(30deg) scale(0.8));
+        @include opacity(1);
+    }
+    45%, 100% {
+        @include transform(translate(100px, -254px) rotate(30deg) scale(0.5));
+        @include opacity(0);
+    }
+}
