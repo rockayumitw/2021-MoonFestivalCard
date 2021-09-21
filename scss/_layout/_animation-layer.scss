@@ -97,7 +97,7 @@
             transform: translate(-50%);
             width: 100%;
             height: calc(600 * var(--unit));
-            background: url('/images/mountain.png');
+            background: url('./images/mountain.png');
             background-repeat: no-repeat;
             background-position: top center;
             background-size: cover;
@@ -302,7 +302,7 @@
         }
         .decoration2{
             @include z-index(footer);
-            background: url('/images/decoration2.svg');
+            background: url('./images/decoration2.svg');
             background-repeat: no-repeat;
             background-position: top center;
             background-size: cover;
