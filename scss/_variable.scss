@@ -6,8 +6,6 @@ $experimental-support-for-microsoft: true;
 $experimental-support-for-khtml: false;
 
 //預設背景圖
-// $default_Background:'../img/background.webp'+$random;
-
 $url:"";
 $random: "?raw=true";
 $n: 15; // 流星數量
@@ -15,7 +13,7 @@ $n: 15; // 流星數量
 //字體
 $font-Style:"Microsoft JhengHei";
 
-$default_Background_color: $url + "./images/BG.png" + $random;
+$default_Background_color: "../images/BG.png" + $random;
 
 $z-index: (
   loading      : 7,

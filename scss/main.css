@@ -4395,16 +4395,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-1 {
   position: absolute;
-  top: 207px;
-  left: 61%;
+  top: 289px;
+  left: 40%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 8.8s linear infinite;
-          animation: meteor 8.8s linear infinite;
+  -webkit-animation: meteor 7.4s linear infinite;
+          animation: meteor 7.4s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-1:before {
@@ -4421,16 +4421,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-2 {
   position: absolute;
-  top: 243px;
-  left: 37%;
+  top: 85px;
+  left: 40%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 6.5s linear infinite;
-          animation: meteor 6.5s linear infinite;
+  -webkit-animation: meteor 6.9s linear infinite;
+          animation: meteor 6.9s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-2:before {
@@ -4447,16 +4447,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-3 {
   position: absolute;
-  top: 134px;
-  left: 41%;
+  top: 114px;
+  left: 82%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 3.7s linear infinite;
-          animation: meteor 3.7s linear infinite;
+  -webkit-animation: meteor 3.9s linear infinite;
+          animation: meteor 3.9s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-3:before {
@@ -4473,16 +4473,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-4 {
   position: absolute;
-  top: 60px;
-  left: 29%;
+  top: 211px;
+  left: 78%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 3.9s linear infinite;
-          animation: meteor 3.9s linear infinite;
+  -webkit-animation: meteor 8.3s linear infinite;
+          animation: meteor 8.3s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-4:before {
@@ -4499,16 +4499,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-5 {
   position: absolute;
-  top: 147px;
-  left: 48%;
+  top: 189px;
+  left: 19%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 3.3s linear infinite;
-          animation: meteor 3.3s linear infinite;
+  -webkit-animation: meteor 3.7s linear infinite;
+          animation: meteor 3.7s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-5:before {
@@ -4525,16 +4525,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-6 {
   position: absolute;
-  top: 250px;
-  left: 51%;
+  top: 161px;
+  left: 88%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 9s linear infinite;
-          animation: meteor 9s linear infinite;
+  -webkit-animation: meteor 6.5s linear infinite;
+          animation: meteor 6.5s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-6:before {
@@ -4551,16 +4551,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-7 {
   position: absolute;
-  top: 268px;
-  left: 18%;
+  top: 95px;
+  left: 26%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 5.2s linear infinite;
-          animation: meteor 5.2s linear infinite;
+  -webkit-animation: meteor 3.5s linear infinite;
+          animation: meteor 3.5s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-7:before {
@@ -4577,16 +4577,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-8 {
   position: absolute;
-  top: 160px;
-  left: 64%;
+  top: 106px;
+  left: 35%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 3.5s linear infinite;
-          animation: meteor 3.5s linear infinite;
+  -webkit-animation: meteor 4.1s linear infinite;
+          animation: meteor 4.1s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-8:before {
@@ -4603,16 +4603,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-9 {
   position: absolute;
-  top: 81px;
-  left: 64%;
+  top: 83px;
+  left: 29%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 6.5s linear infinite;
-          animation: meteor 6.5s linear infinite;
+  -webkit-animation: meteor 4s linear infinite;
+          animation: meteor 4s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-9:before {
@@ -4629,16 +4629,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-10 {
   position: absolute;
-  top: 250px;
-  left: 63%;
+  top: 116px;
+  left: 93%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 9s linear infinite;
-          animation: meteor 9s linear infinite;
+  -webkit-animation: meteor 4.5s linear infinite;
+          animation: meteor 4.5s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-10:before {
@@ -4655,16 +4655,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-11 {
   position: absolute;
-  top: 110px;
-  left: 46%;
+  top: 118px;
+  left: 42%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 5.2s linear infinite;
-          animation: meteor 5.2s linear infinite;
+  -webkit-animation: meteor 3.5s linear infinite;
+          animation: meteor 3.5s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-11:before {
@@ -4681,8 +4681,8 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-12 {
   position: absolute;
-  top: 281px;
-  left: 82%;
+  top: 165px;
+  left: 25%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
@@ -4707,16 +4707,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-13 {
   position: absolute;
-  top: 71px;
-  left: 41%;
+  top: 286px;
+  left: 21%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 8.1s linear infinite;
-          animation: meteor 8.1s linear infinite;
+  -webkit-animation: meteor 7.2s linear infinite;
+          animation: meteor 7.2s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-13:before {
@@ -4733,16 +4733,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-14 {
   position: absolute;
-  top: 223px;
-  left: 69%;
+  top: 219px;
+  left: 85%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 8.6s linear infinite;
-          animation: meteor 8.6s linear infinite;
+  -webkit-animation: meteor 6.1s linear infinite;
+          animation: meteor 6.1s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-14:before {
@@ -4759,16 +4759,16 @@ template {
 
 .sky-area-group .night-sky-bg .meteor-15 {
   position: absolute;
-  top: 146px;
-  left: 69%;
+  top: 171px;
+  left: 80%;
   width: 300px;
   height: 1px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  -webkit-animation: meteor 7.1s linear infinite;
-          animation: meteor 7.1s linear infinite;
+  -webkit-animation: meteor 6.7s linear infinite;
+          animation: meteor 6.7s linear infinite;
 }
 
 .sky-area-group .night-sky-bg .meteor-15:before {
@@ -4831,10 +4831,10 @@ template {
     filter: alpha(opacity=0);
   }
   100% {
-    -webkit-transform: scale(0.59207);
-    -moz-transform: scale(0.59207);
-    -o-transition: scale(0.59207);
-    transform: scale(0.59207);
+    -webkit-transform: scale(0.32649);
+    -moz-transform: scale(0.32649);
+    -o-transition: scale(0.32649);
+    transform: scale(0.32649);
     opacity: 1;
     filter: alpha(opacity=100);
   }
@@ -4850,10 +4850,10 @@ template {
     filter: alpha(opacity=0);
   }
   100% {
-    -webkit-transform: scale(0.32798);
-    -moz-transform: scale(0.32798);
-    -o-transition: scale(0.32798);
-    transform: scale(0.32798);
+    -webkit-transform: scale(0.33122);
+    -moz-transform: scale(0.33122);
+    -o-transition: scale(0.33122);
+    transform: scale(0.33122);
     opacity: 1;
     filter: alpha(opacity=100);
   }
@@ -5034,6 +5034,24 @@ template {
     -webkit-transition: .3s;
     transition: .3s;
   }
+}
+
+._animation-layer .moon .shine {
+  width: 100%;
+  -webkit-animation-name: moon-shine;
+  animation-name: moon-shine;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 ._animation-layer .mountain {
@@ -5256,7 +5274,7 @@ template {
 
 ._animation-layer .flower-right-group .red-light {
   position: absolute;
-  top: 133px;
+  top: 135px;
   right: 20px;
   width: 80px;
   -webkit-transition: .3s;
@@ -5996,6 +6014,36 @@ template {
   }
 }
 
+@-webkit-keyframes moon-shine {
+  0% {
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-filter: drop-shadow(0px 2px 2px rgba(255, 255, 255, 0.2));
+            filter: drop-shadow(0px 2px 2px rgba(255, 255, 255, 0.2));
+  }
+  100% {
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-filter: drop-shadow(0px 2px 10px #fcffff);
+            filter: drop-shadow(0px 2px 10px #fcffff);
+  }
+}
+
+@keyframes moon-shine {
+  0% {
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-filter: drop-shadow(0px 2px 2px rgba(255, 255, 255, 0.2));
+            filter: drop-shadow(0px 2px 2px rgba(255, 255, 255, 0.2));
+  }
+  100% {
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-filter: drop-shadow(0px 2px 10px #fcffff);
+            filter: drop-shadow(0px 2px 10px #fcffff);
+  }
+}
+
 * {
   outline: 0;
   -webkit-box-sizing: border-box;
@@ -6011,7 +6059,7 @@ template {
 }
 
 body {
-  background: url("/images/BG.png?raw=true");
+  background: url("../images/BG.png?raw=true");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: '微軟正黑體';
