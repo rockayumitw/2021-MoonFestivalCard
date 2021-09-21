@@ -15,7 +15,7 @@ $n: 15; // 流星數量
 //字體
 $font-Style:"Microsoft JhengHei";
 
-$default_Background_color: $url + "/images/BG.png" + $random;
+$default_Background_color: $url + "./images/BG.png" + $random;
 
 $z-index: (
   loading      : 7,
